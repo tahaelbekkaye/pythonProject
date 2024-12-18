@@ -141,5 +141,5 @@ EMAIL_HOST = 'smtp.gmail.com' # remplacer avec l'adresse SMTP de votrefournisseu
 EMAIL_PORT = 587 # remplacer avec le port SMTP de votre fournisseur demessagerie
 EMAIL_USE_TLS = True # ou False, selon la configuration de votrefournisseur de messagerie
 EMAIL_HOST_USER = 'elbekkayetaha20@gmail.com' # remplacer avec votre adresse email
-EMAIL_HOST_PASSWORD = 'fwbz hysx pzje ieny'
+EMAIL_HOST_PASSWORD = 'yzoj hzdm twip nybl'
 
