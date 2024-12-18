@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-&d)%-+-i(-nqrm-1q*-1mhn@jwn#(4^bk_bikr5plz=de%&(@&
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.6.117",  # Adresse IP locale utilisée par le capteur
+    "http://localhost",
+    "https://tahaelbekkaye.pythonanywhere.com"
+]
 
 # Application definition
 
@@ -37,19 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DHT',
     'rest_framework',
-    'twilio'
+    'DHT',
+    'twilio',
+    'corsheaders',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'projet.urls'
